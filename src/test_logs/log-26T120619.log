@@ -1,0 +1,21 @@
+341  [main] INFO  com.telran.tasks.utils.MyListener - Start find element -->By.cssSelector: .home-link2.services-pinned__item.services-pinned__all
+360  [main] INFO  com.telran.tasks.utils.MyListener - The element with locatorBy.cssSelector: .home-link2.services-pinned__item.services-pinned__all was found!
+457  [main] INFO  com.telran.tasks.utils.MyListener - Start find element -->By.xpath: //*[text()= 'Маркет']
+677  [main] INFO  com.telran.tasks.utils.MyListener - The element with locatorBy.xpath: //*[text()= 'Маркет'] was found!
+1026 [main] INFO  com.telran.tasks.utils.MyListener - Start find element -->By.xpath: //span[text()='Экспресс']
+14623 [main] INFO  com.telran.tasks.utils.MyListener - The element with locatorBy.xpath: //span[text()='Экспресс'] was found!
+15412 [main] INFO  com.telran.tasks.utils.MyListener - Start find element -->By.cssSelector: [href='/catalog--smartfony-i-aksessuary/23282379/list?filter-express-delivery=1&searchContext=express']
+16408 [main] INFO  com.telran.tasks.utils.MyListener - The element with locatorBy.cssSelector: [href='/catalog--smartfony-i-aksessuary/23282379/list?filter-express-delivery=1&searchContext=express'] was found!
+28236 [main] INFO  com.telran.tasks.utils.MyListener - Start find element -->By.cssSelector: [href='/catalog--null?how=dpop&glfilter=&cvredirect=3&filter-express-delivery=1&searchContext=express&track=srch_ddl']
+38415 [main] INFO  com.telran.tasks.utils.MyListener - We have throwable --> no such element: Unable to locate element: {"method":"css selector","selector":"[href='/catalog--null?how=dpop&glfilter=&cvredirect=3&filter-express-delivery=1&searchContext=express&track=srch_ddl']"}
+  (Session info: chrome=105.0.5195.125)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MacBook-Pro-rodion.local', ip: '2a02:6680:2100:65f6:c538:c8b1:6fc8:5b7a%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.3.1', java.version: '11.0.16.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.125, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: /var/folders/sh/x626j8tn053...}, goog:chromeOptions: {debuggerAddress: localhost:56354}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 80e7633e467a331080f960a6ba0f138e
+*** Element info: {Using=css selector, value=[href='/catalog--null?how=dpop&glfilter=&cvredirect=3&filter-express-delivery=1&searchContext=express&track=srch_ddl']}
+38416 [main] INFO  com.telran.tasks.utils.MyListener - We have a throwable --> null
+38418 [main] INFO  com.telran.tasks.utils.MyListener - We have a throwable --> [Ljava.lang.StackTraceElement;@263558c9
+41881 [main] INFO  com.telran.tasks.utils.MyListener - This is the link of your screen with error -->/screenshots/screen418.png

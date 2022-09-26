@@ -1,80 +1,29 @@
 package com.telran.task.tests;
 
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.interactions.Actions;
+import com.telran.tasks.models.Category;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class SearchItemTest extends TestBase {
 
 
     @Test
     public void searchItemTests() {
-        selectMarket();
-        switchToNextTab(1);
-        selectExpressDepartment();
+        app.getCategoryHelper().selectMarket();
+        app.getItemHelper().switchToNextTab(1);
+        app.getCategoryHelper().selectExpressDepartment();
 //      acceptCookies();
-        selectCategoryType("elektronika/23282330","smartfony-i-aksessuary/23282379");
-        jumpDown();
-        filterItem("Xiaomi");
-        pause(10000);
-        String itemName = getItemNameByOrder(2);
-        typeInSearchInputField(itemName);
-        pause(10000);
-        String foundItemName = getItemNameByOrder(1);
+        app.getCategoryHelper().selectCategoryType(new Category().setCategory("elektronika/23282330").setCategory("smartfony-i-aksessuary/23282379"));
+        app.getItemHelper().jumpDown();
+        app.getItemHelper().filterItem("Xiaomi");
+        app.getItemHelper().pause(10000);
+        String itemName = app.getItemHelper().getItemNameByOrder(2);
+        app.getItemHelper().typeInSearchInputField(itemName);
+        app.getItemHelper().pause(10000);
+        String foundItemName = app.getItemHelper().getItemNameByOrder(1);
         Assert.assertEquals(foundItemName,itemName);
 
 
-    }
-
-    public void acceptCookies() {
-
-        clickAcceptCookies();
-    }
-
-    public void typeInSearchInputField(String itemName) {
-        inputItemNameInSearchField(itemName);
-        clickOnSearchButton();
-    }
-
-    public String getItemNameByOrder(int number) {
-        return findElementNumber(number);
-
-
-    }
-
-    public void filterItem(String brand) {
-        addPrice();
-        clickBrand(brand);
-    }
-
-    public void jumpDown() {
-        Actions actions = new Actions(driver);
-        actions.sendKeys(Keys.PAGE_DOWN).perform();
-    }
-
-    public void selectCategoryType(String category, String category1) {
-        selectElectronicType(category);
-        selectSmartphoneType(category1);
-    }
-
-    public void switchToNextTab(int number){
-        List<String> availableTabs = new ArrayList<>(driver.getWindowHandles());
-        if (!availableTabs.isEmpty()){
-            driver.switchTo().window(availableTabs.get(number));
-        }
-    }
-    public void selectExpressDepartment(){
-
-        clickExpressButton();
-    }
-
-    public void selectMarket(){
-        clickAllServiceButton();
-        selectServiceType("Маркет");
     }
 
     //        Открыть браузер и развернуть на весь экран
